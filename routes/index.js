@@ -38,9 +38,4 @@ router.post('/uploadFile/', (req, res, next) => {
   });
 });
 
-router.post('/upload', [upload.single('photo'), function(req, res, next) {
-	if (err) {res.send(err)}
-	res.send('Successfully uploaded files!');
-}])
-
 module.exports = router;
