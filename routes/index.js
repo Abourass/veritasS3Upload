@@ -20,9 +20,6 @@ const upload = multer({
     metadata: function (req, file, cb) {
       cb(null, {fieldName: file.fieldname});
     },
-    limits: {
-      fileSize: 100 * 1024 * 1024,
-    },
     key: function (req, file, cb) {
       cb(null, Date.now().toString());
     },
@@ -34,6 +31,7 @@ router.post('/uploadFile/', (req, res, next) => {
 });
 
 router.post('/upload', [upload.single('photo'), function(req, res, next) {
+	if (err) {res.send(err)}
 	res.send('Successfully uploaded files!');
 }])
 
