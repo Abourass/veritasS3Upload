@@ -33,19 +33,8 @@ router.post('/uploadFile/', (req, res, next) => {
   upload(req, res, err => { res.send('Success'); });
 });
 
-/*
-  if (Object.keys(req.files).length !== 0) {
-  // The name of the input field (i.e. "sampleFile") is used to retrieve the uploaded file
-    // Use the mv() method to place the file somewhere on your server
-    req.files.license.mv(`../AssetVal_Boot/data/reo/${req.user.id}/license.pdf`, err => {
-      if (err) { return res.status(500).send(err); }
-      req.flash('success_msg', 'File Successfully Uploaded');
-      res.redirect('../licenseProfile');
-    });
-  } else {
-    req.flash('error_msg', ' No files were uploaded.');
-    return res.status(400).send('No files were uploaded.');
-  }
-});
-*/
+router.post('/upload', [upload.single('photo'), function(req, res, next) {
+	res.send('Successfully uploaded files!');
+}])
+
 module.exports = router;
