@@ -1,0 +1,100 @@
+{
+  "name": "veritass3upload",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nodemon ./bin/www",
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.431.0",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "dotenv": "^7.0.0",
+    "express": "~4.16.0",
+    "hbs": "~4.0.1",
+    "http-errors": "~1.6.2",
+    "morgan": "~1.9.0",
+    "multer": "^1.4.1",
+    "multer-s3": "^2.9.0"
+  },
+  "devDependencies": {
+    "@getify/eslint-plugin-proper-ternary": "^2.1.1",
+    "@types/express": "^4.16.1",
+    "eslint": "^5.15.3",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-security": "^1.4.0",
+    "google-closure-compiler": "^20190325.0.0",
+    "jest": "^24.5.0",
+    "nodemon": "^1.18.10",
+    "stylelint": "^9.10.1",
+    "stylelint-config-standard": "^18.2.0"
+  },
+  "eslintConfig": {
+    "plugins": [
+      "security",
+      "@getify/proper-ternary"
+    ],
+    "extends": [
+      "airbnb-base",
+      "plugin:node/recommended",
+      "plugin:security/recommended"
+    ],
+    "env": {
+      "shared-node-browser": true,
+      "node": true,
+      "es6": true,
+      "mongo": true,
+      "jquery": true,
+      "jest": true
+    },
+    "rules": {
+      "@getify/proper-ternary/nested": "error",
+      "@getify/proper-ternary/parens": "error",
+      "arrow-parens": [
+        "error",
+        "as-needed"
+      ],
+      "yoda": 0,
+      "no-unused-vars": 0,
+      "one-var": 0,
+      "one-var-declaration-per-line": 0,
+      "consistent-return": 0,
+      "linebreak-style": 0,
+      "eqeqeq": 0,
+      "func-names": 0,
+      "import/newline-after-import": 0,
+      "max-len": 0,
+      "no-console": 0,
+      "no-lonely-if": 0,
+      "no-new-object": [
+        "error"
+      ],
+      "object-curly-newline": [
+        "error",
+        {
+          "ObjectPattern": {
+            "multiline": true
+          }
+        }
+      ],
+      "no-param-reassign": 0,
+      "no-plusplus": 0,
+      "no-restricted-properties": 0,
+      "no-shadow": 0,
+      "no-underscore-dangle": 0,
+      "no-void": 0,
+      "object-curly-spacing": 0,
+      "object-shorthand": [
+        "error",
+        "consistent"
+      ],
+      "prefer-destructuring": 0,
+      "space-before-blocks": 0,
+      "space-before-function-paren": 0,
+      "prefer-rest-params": 0
+    }
+  }
+}
