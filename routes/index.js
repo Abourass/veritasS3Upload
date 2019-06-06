@@ -1,3 +1,5 @@
+'use strict';
+
 const express = require('express');
 const router = express.Router();
 const AWS = require('aws-sdk');
@@ -29,7 +31,7 @@ const upload = multer({
 const singleUpload = upload.single('image');
 
 router.post('/uploadFile/', (req, res, next) => {
-    singleUpload(req, res, function(err) {
+  singleUpload(req, res, (err) => {
     if (err) {
       return res.status(422).send({errors: [{title: 'Image Upload Error', detail: err.message}]});
     }
