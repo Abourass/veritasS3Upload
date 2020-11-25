@@ -21,7 +21,7 @@
     "morgan": "^1.10.0",
     "multer": "^1.4.2",
     "multer-s3": "^2.9.0",
-    "snyk": "^1.398.1"
+    "snyk": "^1.425.4"
   },
   "devDependencies": {
     "@getify/eslint-plugin-proper-ternary": "^3.0.1",
