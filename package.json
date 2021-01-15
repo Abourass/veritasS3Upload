@@ -9,7 +9,7 @@
     "prepare": "npm run snyk-protect"
   },
   "dependencies": {
-    "aws-sdk": "^2.799.0",
+    "aws-sdk": "^2.814.0",
     "chalk": "^4.1.0",
     "cookie-parser": "^1.4.5",
     "debug": "^4.3.1",
